@@ -13,7 +13,7 @@ public class FundamentalsTraining {
      * @return one added to the value, eg: 3
      */
     public static int addOne(int value) {
-        return value++;
+        return value + 1;
     }
 
     /**
@@ -149,14 +149,13 @@ public class FundamentalsTraining {
      * the string "equals" otherwise, eg: "equals"
      */
     public static String inferiorOrSuperiorOrEquals(int first, int second) {
-        switch (first) {
-            case 1:
-                return "inferior";
-            case 2:
-                return "superior";
-            default:
-                return "equals";
+        if (first < second) {
+            return "inferior";
         }
+        if (first > second) {
+            return "superior";
+        }
+        return "equals";
     }
 
     /**
